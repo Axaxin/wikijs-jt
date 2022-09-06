@@ -4,8 +4,8 @@ services:
     image: lscr.io/linuxserver/wikijs
     container_name: wikijs
     environment:
-      - PUID=1000        # 如何查看当前用户的PUID和PGID，直接命令行输入id就行
-      - PGID=1000
+      - PUID=0        # 如何查看当前用户的PUID和PGID，直接命令行输入id就行
+      - PGID=0
       - TZ=Asia/Shanghai
     volumes:
       - ./wikijs/config:/config  # 配置文件映射到本地，数据不会因为Docker停止而丢失
